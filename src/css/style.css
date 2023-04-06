@@ -95,14 +95,20 @@ html, body {
     background-color: var(--primary);
 }
 .btn--small {
-    font-size: 0.625rem 0.875rem;
+    padding: .625rem .6875rem;
     min-width: 7.5rem;
-    padding: 0.6875rem;
+    font-size: .875rem;
 }
 
 .btn--primary:hover {
     color: var(--primary);
     background-color: var(--white);
+}
+
+.btn--outline {
+    border: 0.0625rem solid var(--primary);
+    box-shadow: 0 .1875rem .375rem var(--primary-light);
+    cursor: pointer;
 }
 
 .intro {
@@ -114,7 +120,7 @@ html, body {
     background-repeat: no-repeat;
 }
 
-.intro__scroll {
+.intro .intro__scroll {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -149,6 +155,7 @@ html, body {
 .logo .logo__img {
     width: 1.9375rem;
     height: auto;
+    margin-top: -.25rem;
     margin-right: 0.625rem;
 }
 .logo .logo__text {}
@@ -231,7 +238,6 @@ html, body {
 }
 
 .box .box__inner{
-    position: relative;
     width: 100%;
     max-width: var(--max-width);
     padding-inline: 1rem;
@@ -245,8 +251,16 @@ html, body {
     column-gap: 1rem;
 }
 
+.cols--wrapper {
+    width: 100%;
+    max-width: 56.5rem;
+    margin-inline: auto;
+    align-items: flex-start;
+}
+
 .article{
     color: var(--gray-7);
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .article .article__img{
@@ -271,6 +285,8 @@ html, body {
 
 .service {
     text-align: center;
+    max-width: 14.675rem;
+    margin-inline: auto;
 }
 .service .service__img {
     margin-bottom: 1.375rem;
@@ -291,3 +307,55 @@ html, body {
     font-weight: 300;
     margin: 0 0 .9375rem 0;
 }
+
+.formPhoto {
+    width: 100%;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+}
+.contactForm .contactForm__group {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    column-gap: .625rem;
+}
+.contactForm .contactForm__input {
+    border: 0.0625rem solid var(--gray-3);
+    padding: .5rem .75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    color: var(--gray-6);
+    margin-bottom: 1.25rem;
+    outline: 0;
+    resize: none;
+}
+
+.contactForm .contactForm__input::placeholder {
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    color: var(--gray-5);
+}
+
+.contactForm .contactForm__lbl {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .625rem;
+    line-height: 1.4;
+    color: var(--gray-5);
+    font-weight: 300;
+}
+.contactForm .contactForm__agreement {}
+.contactForm .contactForm__submit {
+    align-self: flex-end;
+}
+.contactForm .contactForm__input.contactForm__input--error {
+    border-color: var(--primary);
+    box-shadow: 0 .0625rem .375rem var(--primary-light);
+}
+
+
