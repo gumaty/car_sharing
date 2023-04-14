@@ -321,6 +321,7 @@ html, body {
     flex-direction: row-reverse;
     align-items: flex-start;
     column-gap: .625rem;
+    margin-bottom: 20px;
 }
 .contactForm .contactForm__input {
     border: 0.0625rem solid var(--gray-3);
@@ -349,7 +350,30 @@ html, body {
     color: var(--gray-5);
     font-weight: 300;
 }
-.contactForm .contactForm__agreement {}
+
+.contactForm__agreement {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+
+.contactForm__agreement ~ .contactForm__span {
+    width: 100%;
+    max-width:21px;
+    height: 21px;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+}
+
+.contactForm__agreement:checked ~ .contactForm__span {
+    background-image: url("../images/icon_check.svg");
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .contactForm .contactForm__submit {
     align-self: flex-end;
     text-transform: uppercase;
